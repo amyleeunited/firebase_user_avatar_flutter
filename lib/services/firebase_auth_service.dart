@@ -10,6 +10,9 @@ class User {
 class FirebaseAuthService {
   final _firebaseAuth = FirebaseAuth.instance;
 
+  get getfb {
+    return _firebaseAuth;
+  }
   User _userFromFirebase(FirebaseUser user) {
     return user == null ? null : User(uid: user.uid);
   }
